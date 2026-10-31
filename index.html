@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080d17" />
+    <title>Docker Monitor</title>
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#inicio" aria-label="Docker Monitor, início">
+        <img src="./public/img/Neon_Whale_Pulse_Container_Logo.png" alt="Logo">
+        <span>Whalewatch<small>MONITORA CONSUMO DE RECURSOS DOCKER</small></span>
+      </a>
+      <nav class="menu" aria-label="Links do projeto">
+        <a href="https://github.com/jpedrooliveira-dl" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://joaopedrooliveira.vercel.app/" target="_blank" rel="noreferrer" aria-label="Portfólio"><i class="fa-solid fa-globe"></i></a>
+      </nav>
+    </header>
+    <main id="inicio">
+      <p class="eyebrow">Infraestrutura em tempo real</p>
+      <h1>Seus contêineres,<br />sob controle.</h1>
+      <p class="intro">Acompanhe o consumo de recursos dos contêineres Docker em execução.</p>
+      <section aria-labelledby="containers-title">
+        <div class="overview">
+          <h2 class="section-title" id="containers-title">Contêineres</h2>
+          <span class="live" id="connection-status" role="status">Conectando ao servidor…</span>
+        </div>
+        <div id="container-grid" class="grid" aria-live="polite">
+          <div class="empty-state"><i class="fa-brands fa-docker" aria-hidden="true"></i>Carregando dados dos contêineres…</div>
+        </div>
+      </section>
+    </main>
+    <footer aria-label="Redes sociais">
+      <a class="icon-menu" href="https://joaopedrooliveira.vercel.app/" target="_blank" rel="noreferrer" aria-label="Portfólio"><i class="fa-solid fa-globe"></i></a>
+      <a class="icon-menu" href="https://github.com/jpedrooliveira-dl" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a class="icon-menu" href="https://www.instagram.com/joaopedroodl/" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a class="icon-menu" href="https://x.com/Joaopedro26dev" target="_blank" rel="noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+    </footer>
+    <script src="./public/js/script.js"></script>
+  </body>
+</html>
