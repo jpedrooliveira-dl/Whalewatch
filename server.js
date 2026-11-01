@@ -1,9 +1,14 @@
+const path = require("path")
+
 const express = require("express");
 const cors = require("cors");
 const { exec } = require("child_process");
 
 const app = express();
 app.use(cors());
+
+app.use("/public", express.static(path.join(__dirname, "public")))
+app.get("/", (req, res) => res.sendFile(path.join(__dirname, "index.html")))
 
 app.get("/api/stats", (req, res) => {
     const comando = `docker stats --no-stream --format "{{.Name}}|{{.CPUPerc}}|{{.MemUsage}}"`;
@@ -27,6 +32,6 @@ app.get("/api/stats", (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log("Servidor de monitoramento rodando em http://localhost:3000");
+app.listen(8765, () => {
+    console.log("Servidor de monitoramento rodando em http://localhost:8765");
 });
