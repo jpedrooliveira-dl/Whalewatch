@@ -51,7 +51,7 @@ function criaCard(docker) {
 
 async function buscaDados() {
     try {
-        const resposta = await fetch('http://192.168.2.110:3000/api/stats')
+        const resposta = await fetch('/api/stats')
         if (!resposta.ok) throw new Error(`Servidor respondeu com status ${resposta.status}`)
         const containeres = await resposta.json()
         if (!Array.isArray(containeres)) throw new Error('Resposta do servidor inválida')
