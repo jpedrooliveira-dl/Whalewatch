@@ -1,3 +1,4 @@
+
 const grid = document.getElementById('container-grid')
 const connectionStatus = document.getElementById('connection-status')
 
