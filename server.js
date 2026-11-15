@@ -3,6 +3,9 @@ const path = require("path")
 const express = require("express");
 const cors = require("cors");
 const { exec } = require("child_process");
+const helmet = require('helmet')
+
+const app = express();
 app.use(
   helmet({
     contentSecurityPolicy: {
@@ -17,9 +20,6 @@ app.use(
     },
   })
 );
-
-const app = express();
-app.use(helmet())
 app.use(cors());
 
 app.use("/public", express.static(path.join(__dirname, "public")))
