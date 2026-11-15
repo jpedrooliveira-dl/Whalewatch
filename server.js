@@ -3,7 +3,20 @@ const path = require("path")
 const express = require("express");
 const cors = require("cors");
 const { exec } = require("child_process");
-const helmet = require('helmet')
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      useDefaults: true,
+      directives: {
+        "script-src": ["'self'", "'unsafe-inline'", "https://cdnjs.cloudflare.com"],
+        "script-src-attr": ["'unsafe-inline'"],
+        "img-src": ["'self'", "data:", "https:"],
+        "connect-src": ["'self'"],
+        "upgrade-insecure-requests": null,
+      },
+    },
+  })
+);
 
 const app = express();
 app.use(helmet())
